@@ -10,15 +10,46 @@ export function Calculadora() {
   const [txtValor2, setTxtValor2] = useState('');
   const [resultado, setResultado] = useState(0);
 
-  const calcular = () => {
+  const somar = () => {
     if (!txtValor1 || !txtValor2) {
       alert('Prencha os valores antes de executar');
     }
     const valor1 = parseFloat(txtValor1);
     const valor2 = parseFloat(txtValor2);
-    const total = valor1 + valor2;
-    setResultado(parseFloat(total.toFixed(2)));
+    const soma = valor1 + valor2;
+    setResultado(parseFloat(soma.toFixed(2)));
   };
+
+  const subtrair = () => {
+    if (!txtValor1 || !txtValor2) {
+      alert('Prencha os valores antes de executar');
+    }
+    const valor1 = parseFloat(txtValor1);
+    const valor2 = parseFloat(txtValor2);
+    const subtracao = valor1 - valor2;
+    setResultado(parseFloat(subtracao.toFixed(2)));
+  };
+
+  const multiplicar = () => {
+    if (!txtValor1 || !txtValor2) {
+      alert('Prencha os valores antes de executar');
+    }
+    const valor1 = parseFloat(txtValor1);
+    const valor2 = parseFloat(txtValor2);
+    const multiplicacao = valor1 * valor2;
+    setResultado(parseFloat(multiplicacao.toFixed(2)));
+  };
+
+  const divir = () => {
+    if (!txtValor1 || !txtValor2) {
+      alert('Prencha os valores antes de executar');
+    }
+    const valor1 = parseFloat(txtValor1);
+    const valor2 = parseFloat(txtValor2);
+    const divisao = valor1 / valor2;
+    setResultado(parseFloat(divisao.toFixed(2)));
+  };
+
   return (
     <div>
       <label>Valor 1:</label> <br />
@@ -36,11 +67,12 @@ export function Calculadora() {
       />
       <br />
       <label>Resultado</label> <br />
-      <input type="text"
-       name="resultado" 
-       readOnly value={resultado}/>
+      <input type="text" name="resultado" readOnly value={resultado} />
       <br />
-      <button onClick={calcular}>Calcular</button>
+      <button onClick={somar}>Somar</button>
+      <button onClick={subtrair}>Subtrair</button>
+      <button onClick={multiplicar}>Multiplicar</button>
+      <button onClick={divir}>Dividir</button>
     </div>
   );
 }
