@@ -1,0 +1,14 @@
+.campos {
+  width: 240px;
+  height: 1px;
+  padding: 16px;
+  border: 2px solid brown;
+  border-radius: 8px;
+}
+
+.botoes {
+  display: flex;
+  margin: 16px auto;
+  align-items: center;
+  justify-content: space-between;
+}
